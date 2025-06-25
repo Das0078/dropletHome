@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { BackgroundBeamsWithCollisionDemo } from "./components/Background/BackgroundBeamsWithCollisionDemo";
 import { ThreeDCardDemo } from "./components/Card/ThreeDCardDemo";
@@ -11,7 +12,9 @@ const page = () => {
         <span className=" text-white bg-transparent md:absolute z-10000 px-2 mt-1">
           <span className="flex items-center justify-between">
             <span className='flex items-center cursor-pointer'>
-              <img
+              <Image 
+               width={48}
+               height={48}
                 className="w-12"
                 src="/images/droplet_mini.png"
                 alt="droplet logo"
@@ -30,6 +33,7 @@ const page = () => {
         </div>
         {/* <ThreeDMarqueeDemo/> */}
         <div className="flex items-center justify-center gap-x-2 max-md:flex-col max-md:items-start">
+         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {cardData?.map((item: any) => {
             return <ThreeDCardDemo key={item?.title} payload={item} />;
           })}

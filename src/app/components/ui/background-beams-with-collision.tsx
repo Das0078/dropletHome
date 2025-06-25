@@ -10,7 +10,9 @@ export const BackgroundBeamsWithCollision = ({
   children: React.ReactNode;
   className?: string;
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const containerRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const parentRef = useRef<any>(null);
 
   const beams = [
@@ -114,6 +116,8 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number;
     };
   }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 >(({ parentRef, containerRef, beamOptions = {} }, ref) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
@@ -126,6 +130,8 @@ const CollisionMechanism = React.forwardRef<
   const [beamKey, setBeamKey] = useState(0);
   const [cycleCollisionDetected, setCycleCollisionDetected] = useState(false);
 
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const checkCollision = () => {
       if (

@@ -3,8 +3,9 @@
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { GlowingEffect } from "../ui/glowing-effect";
+import Image from "next/image";
 
-
+{/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
 export function ThreeDCardDemo({payload}:any) {
   return (
 
@@ -35,14 +36,16 @@ export function ThreeDCardDemo({payload}:any) {
           {payload?.description}
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
-          <img
+          <Image
+          width={500}
+          height={100}
             src={payload?.imgUrl}
             className="h-60 rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
       </CardBody>
-    </CardContainer>
+    </CardContainer> 
 
  
   );
