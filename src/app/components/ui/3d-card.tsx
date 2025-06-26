@@ -97,7 +97,7 @@ export const CardBody = ({
   );
 };
 
-{/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+
 export const CardItem = ({
   as: Tag = "div",
   children,
@@ -119,14 +119,14 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     handleAnimations();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMouseEntered]);
 
   const handleAnimations = () => {
