@@ -26,7 +26,7 @@ export function VortexDemo() {
           <span className="text-sm"> Join now →
             </span>
 </span> */}
-        <p className="px-2 max-md:hidden py-2 cursor-pointer text-white text-[2rem] backdrop-blur-sm border bg-cyan-300/10 border-cyan-500/20 text-center rounded-full relative mt-2">
+        <p onClick={()=>window.location.href="https://droplet-fe.onrender.com"} className="px-2 max-md:hidden py-2 cursor-pointer text-white text-[2rem] backdrop-blur-sm border bg-cyan-300/10 border-cyan-500/20 text-center rounded-full relative mt-2">
           Request a demo →
         </p>
       </Vortex>
